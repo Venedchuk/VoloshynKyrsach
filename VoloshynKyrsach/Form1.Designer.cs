@@ -111,10 +111,10 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.regionsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.factoryOrdersDataSet1)).BeginInit();
@@ -464,8 +464,8 @@
             this.tabPage1.Controls.Add(this.textBox17);
             this.tabPage1.Controls.Add(this.button11);
             this.tabPage1.Controls.Add(this.button12);
-            this.tabPage1.Controls.Add(this.textBox14);
             this.tabPage1.Controls.Add(this.textBox15);
+            this.tabPage1.Controls.Add(this.textBox16);
             this.tabPage1.Controls.Add(this.dataGridView4);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -846,13 +846,6 @@
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(306, 201);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(54, 20);
-            this.textBox14.TabIndex = 15;
-            // 
             // textBox15
             // 
             this.textBox15.Location = new System.Drawing.Point(110, 201);
@@ -873,6 +866,13 @@
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(82, 20);
             this.textBox18.TabIndex = 19;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(216, 201);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(81, 20);
+            this.textBox16.TabIndex = 17;
             // 
             // Form1
             // 
@@ -1017,8 +1017,8 @@
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBox16;
     }
 }
 
