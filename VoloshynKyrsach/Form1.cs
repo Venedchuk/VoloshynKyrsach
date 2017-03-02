@@ -142,6 +142,7 @@ namespace VoloshynKursach
             using (var db = new Context())
             {
                 var forremove = db.Regions.Single(x => x.Id == a);
+
                 db.Regions.Remove(forremove);
                 db.SaveChanges();
             }
@@ -264,5 +265,130 @@ namespace VoloshynKursach
             }
             Form1_Load(new object(), new EventArgs());
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (dataGridView5.SelectedRows!=null)
+            {
+                textBox14.Text = (string)dataGridView5.SelectedRows[0].Cells[0].Value.ToString();//hidden id
+                textBox6.Text = (string)dataGridView5.SelectedRows[0].Cells[1].Value.ToString();
+                textBox11.Text = (string)dataGridView5.SelectedRows[0].Cells[2].Value.ToString();
+                textBox4.Text = (string)dataGridView5.SelectedRows[0].Cells[3].Value.ToString();
+                textBox12.Text = (string)dataGridView5.SelectedRows[0].Cells[4].Value.ToString();
+                textBox13.Text = (string)dataGridView5.SelectedRows[0].Cells[5].Value.ToString();
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            using (var db = new Context())
+            {
+                int regId, needInt, moreInt, countTechnik, regid,id;
+                int.TryParse(textBox6.Text, out regId);
+                int.TryParse(textBox11.Text, out needInt);
+                int.TryParse(textBox4.Text, out moreInt);
+                int.TryParse(textBox12.Text, out countTechnik);
+                int.TryParse(textBox13.Text, out regid);
+                int.TryParse(textBox14.Text, out id);
+                var result = db.Warehouses.SingleOrDefault(a => a.Id == id);
+                if (result != null)
+                {
+                    result.Number = regId;
+                    result.TotalSize = needInt;
+                    result.Workers = moreInt;
+                    result.CountTechnick = countTechnik;
+                    result.Region = db.Regions.Single(x => x.Id == regid);
+                }
+              //  db.Warehouses.Add(new Warehouse() { Number = regId, TotalSize = needInt, Workers = moreInt, CountTechnick = countTechnik, Region = db.Regions.Single(x => x.Id == regid) });
+                db.SaveChanges();
+            }
+            Form1_Load(new object(), new EventArgs());
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+
+            //IQueryable<Order> result = Enumerable.Empty<Order>().AsQueryable();
+            var result = new List<Order>();
+            int sizeord, depid, shopid;
+            DateTime startord;
+            string nameprod;
+            nameprod = textBox19.Text;            //int.TryParse(textBox22.Text, out nameprod);
+            int.TryParse(textBox20.Text, out sizeord);
+            DateTime.TryParse(textBox21.Text, out startord);
+            int.TryParse(textBox22.Text, out depid);
+            int.TryParse(textBox23.Text, out shopid);
+            using (var db = new Context())
+            {
+                result = db.Orders.Include(x => x.Department).Include(x => x.Shop).ToList();
+
+            }
+            result.ToList();
+            if (nameprod != "")
+            {
+                var res = new List<Order>();
+                foreach (var item in result)
+                {
+                    if (item.NameProduct == nameprod)
+                    {
+                        res.Add(item);
+                    }
+                }
+                result = res;
+
+            }
+            if (sizeord != 0)
+            {
+                var res = new List<Order>();
+                foreach (var item in result)
+                {
+                    if (item.SizeOrder == sizeord)
+                    {
+                        res.Add(item);
+                    }
+                }
+                result = res;
+            }
+            if (startord != new DateTime())
+            {
+                var res = new List<Order>();
+                foreach (var item in result)
+                {
+                    if (item.StartOrder == startord)
+                    {
+                        res.Add(item);
+                    }
+                }
+                result = res;
+            }
+            if (depid != 0)
+            {
+                var res = new List<Order>();
+                foreach (var item in result)
+                {
+                    if (item.Department.Id == depid)
+                    {
+                        res.Add(item);
+                    }
+                }
+                result = res;
+            }
+            if (shopid != 0)
+            {
+                var res = new List<Order>();
+                foreach (var item in result)
+                {
+                    if (item.Shop.Id == shopid)
+                    {
+                        res.Add(item);
+                    }
+                }
+                result = res;
+            }
+
+        }
+        
+
+       
     }
 }

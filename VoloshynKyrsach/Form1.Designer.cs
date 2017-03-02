@@ -69,6 +69,18 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Switch = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button15 = new System.Windows.Forms.Button();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameProductDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,6 +91,9 @@
             this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.button9 = new System.Windows.Forms.Button();
@@ -109,12 +124,6 @@
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.button8 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.regionsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.factoryOrdersDataSet1)).BeginInit();
@@ -460,6 +469,12 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button15);
+            this.tabPage1.Controls.Add(this.textBox23);
+            this.tabPage1.Controls.Add(this.textBox22);
+            this.tabPage1.Controls.Add(this.textBox21);
+            this.tabPage1.Controls.Add(this.textBox20);
+            this.tabPage1.Controls.Add(this.textBox19);
             this.tabPage1.Controls.Add(this.textBox18);
             this.tabPage1.Controls.Add(this.textBox17);
             this.tabPage1.Controls.Add(this.button11);
@@ -474,6 +489,99 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Order";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(32, 230);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(72, 23);
+            this.button15.TabIndex = 25;
+            this.button15.Text = "Find";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(444, 232);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(82, 20);
+            this.textBox23.TabIndex = 24;
+            // 
+            // textBox22
+            // 
+            this.textBox22.Location = new System.Drawing.Point(366, 233);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(72, 20);
+            this.textBox22.TabIndex = 23;
+            // 
+            // textBox21
+            // 
+            this.textBox21.Location = new System.Drawing.Point(303, 233);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(57, 20);
+            this.textBox21.TabIndex = 22;
+            // 
+            // textBox20
+            // 
+            this.textBox20.Location = new System.Drawing.Point(202, 233);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(95, 20);
+            this.textBox20.TabIndex = 21;
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(110, 233);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(86, 20);
+            this.textBox19.TabIndex = 20;
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(444, 201);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(82, 20);
+            this.textBox18.TabIndex = 19;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(366, 201);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(72, 20);
+            this.textBox17.TabIndex = 18;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(29, 199);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(72, 23);
+            this.button11.TabIndex = 13;
+            this.button11.Text = "Add";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(29, 170);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(72, 23);
+            this.button12.TabIndex = 14;
+            this.button12.Text = "Remove";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(110, 201);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(86, 20);
+            this.textBox15.TabIndex = 16;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(202, 201);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(95, 20);
+            this.textBox16.TabIndex = 17;
             // 
             // dataGridView4
             // 
@@ -570,6 +678,9 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.textBox14);
+            this.tabPage3.Controls.Add(this.button14);
+            this.tabPage3.Controls.Add(this.button13);
             this.tabPage3.Controls.Add(this.textBox13);
             this.tabPage3.Controls.Add(this.textBox12);
             this.tabPage3.Controls.Add(this.button9);
@@ -585,6 +696,34 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Warehouse";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(44, 241);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(62, 20);
+            this.textBox14.TabIndex = 22;
+            this.textBox14.Visible = false;
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(112, 169);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(62, 23);
+            this.button14.TabIndex = 21;
+            this.button14.Text = "Update";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(44, 169);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(62, 23);
+            this.button13.TabIndex = 20;
+            this.button13.Text = "Change";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // textBox13
             // 
@@ -602,7 +741,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(53, 198);
+            this.button9.Location = new System.Drawing.Point(44, 198);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(37, 23);
             this.button9.TabIndex = 13;
@@ -826,54 +965,6 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(29, 199);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(72, 23);
-            this.button11.TabIndex = 13;
-            this.button11.Text = "Add";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(110, 228);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(72, 23);
-            this.button12.TabIndex = 14;
-            this.button12.Text = "Remove";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(110, 201);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(97, 20);
-            this.textBox15.TabIndex = 16;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(366, 201);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(72, 20);
-            this.textBox17.TabIndex = 18;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(444, 201);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(82, 20);
-            this.textBox18.TabIndex = 19;
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(216, 201);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(81, 20);
-            this.textBox16.TabIndex = 17;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1019,6 +1110,15 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox textBox19;
     }
 }
 
