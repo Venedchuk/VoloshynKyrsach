@@ -21,7 +21,7 @@ namespace VoloshynKursach
             InitializeComponent();
             Initiation();
         }
-
+        #region ініціація
         public void Initiation()
         {
             Region reg = new Region();
@@ -111,7 +111,7 @@ namespace VoloshynKursach
             // TODO: This line of code loads data into the 'factoryOrdersDataSet.Orders' table. You can move, or remove it, as needed.
          
         }
-
+        #endregion
         private void button2_Click(object sender, EventArgs e)
         {
             int a = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
@@ -119,7 +119,14 @@ namespace VoloshynKursach
             {
                 var forremove = db.Regions.Single(x => x.Id == a);
                 db.Regions.Remove(forremove);
-                db.SaveChanges();
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (Exception exc)
+                {
+
+                }
             }
             Form1_Load(new object(),new EventArgs());
         }
@@ -142,7 +149,14 @@ namespace VoloshynKursach
                 var forremove = db.Shops.Single(x => x.Id == a);
 
                 db.Shops.Remove(forremove);
-                db.SaveChanges();
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (Exception exc)
+                {
+
+                }
             }
             Form1_Load(new object(), new EventArgs());
         }
@@ -165,7 +179,14 @@ namespace VoloshynKursach
             {
                 var forremove = db.Factories.Single(x => x.Id == a);
                 db.Factories.Remove(forremove);
-                db.SaveChanges();
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (Exception exc)
+                {
+
+                }
             }
             Form1_Load(new object(), new EventArgs());
         }
@@ -189,7 +210,14 @@ namespace VoloshynKursach
             {
                 var forremove = db.Departments.Single(x => x.Id == a);
                 db.Departments.Remove(forremove);
-                db.SaveChanges();
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (Exception exc)
+                {
+
+                }
             }
             Form1_Load(new object(), new EventArgs());
         }
@@ -214,7 +242,14 @@ namespace VoloshynKursach
             {
                 var forremove = db.Warehouses.Single(x => x.Id == a);
                 db.Warehouses.Remove(forremove);
-                db.SaveChanges();
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (Exception exc)
+                {
+
+                }
             }
             Form1_Load(new object(), new EventArgs());
         }
@@ -242,7 +277,14 @@ namespace VoloshynKursach
             {
                 var forremove = db.Orders.Single(x => x.Id == a);
                 db.Orders.Remove(forremove);
-                db.SaveChanges();
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (Exception exc)
+                {
+
+                }
             }
             Form1_Load(new object(), new EventArgs());
         }
@@ -303,7 +345,7 @@ namespace VoloshynKursach
             Form1_Load(new object(), new EventArgs());
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void button15_Click(object sender, EventArgs e) //method find order
         {
 
             //IQueryable<Order> result = Enumerable.Empty<Order>().AsQueryable();
@@ -406,7 +448,6 @@ namespace VoloshynKursach
             var ress = dialog.ShowDialog();
         }
         
-
        
     }
 }
