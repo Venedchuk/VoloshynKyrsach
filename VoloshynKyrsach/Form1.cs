@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.Entity;
 using System.IO;
 using System.Diagnostics;
+using System.Threading;
 
 namespace VoloshynKursach
 {
@@ -18,7 +19,7 @@ namespace VoloshynKursach
         public Form1()
         {
             InitializeComponent();
-            //Initiation();
+            Initiation();
         }
 
         public void Initiation()
@@ -26,7 +27,8 @@ namespace VoloshynKursach
             Region reg = new Region();
             using (var db = new Context())
             {
-                reg = db.Regions.SingleOrDefault(x => x.name == "Житомир");
+                //Thread.Sleep(2000);
+                reg = db.Regions.FirstOrDefault();
             }
 
             if (reg == null)
@@ -87,10 +89,6 @@ namespace VoloshynKursach
             }
         }
 
-        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -141,9 +139,9 @@ namespace VoloshynKursach
             int a = (int)dataGridView3.SelectedRows[0].Cells[0].Value;
             using (var db = new Context())
             {
-                var forremove = db.Regions.Single(x => x.Id == a);
+                var forremove = db.Shops.Single(x => x.Id == a);
 
-                db.Regions.Remove(forremove);
+                db.Shops.Remove(forremove);
                 db.SaveChanges();
             }
             Form1_Load(new object(), new EventArgs());
@@ -320,7 +318,8 @@ namespace VoloshynKursach
             int.TryParse(textBox23.Text, out shopid);
             using (var db = new Context())
             {
-                result = db.Orders.Include(x => x.Department).Include(x => x.Shop).ToList();
+                result = db.Orders
+                    .Include(x => x.Department).Include(x => x.Shop).ToList();
 
             }
             result.ToList();
@@ -385,7 +384,26 @@ namespace VoloshynKursach
                 }
                 result = res;
             }
+            // Get reference to the dialog type.
+            var dialogTypeName = "System.Windows.Forms.PropertyGridInternal.GridErrorDlg";
+            var dialogType = typeof(Form).Assembly.GetType(dialogTypeName);
 
+            // Create dialog instance.
+            var dialog = (Form)Activator.CreateInstance(dialogType, new PropertyGrid() );
+            var msg = "";
+            foreach (var item in result)
+            {
+                msg += item.NameProduct + " size:" + item.SizeOrder +
+                   // " start:" + item.StartOrder +
+                    " Цех№:" + item.Department.Id + " Магазин:" + item.Shop.Id+ Environment.NewLine;
+            }
+
+            // Populate relevant properties on the dialog instance.
+            dialog.Text = "Find Orders";
+            dialogType.GetProperty("Details").SetValue(dialog, msg, null);
+            dialogType.GetProperty("Message").SetValue(dialog, "Report", null);
+            // Display dialog.
+            var ress = dialog.ShowDialog();
         }
         
 

@@ -341,14 +341,14 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(620, 537);
+            this.textBox5.Location = new System.Drawing.Point(599, 537);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 20;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(742, 563);
+            this.button5.Location = new System.Drawing.Point(721, 563);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 19;
@@ -358,7 +358,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(539, 534);
+            this.button6.Location = new System.Drawing.Point(518, 534);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 18;
@@ -397,12 +397,12 @@
             this.nameDataGridViewTextBoxColumn1,
             this.locationsDataGridViewTextBoxColumn});
             this.dataGridView3.DataSource = this.shopsBindingSource1;
-            this.dataGridView3.Location = new System.Drawing.Point(482, 381);
+            this.dataGridView3.Location = new System.Drawing.Point(454, 381);
             this.dataGridView3.MultiSelect = false;
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(344, 150);
+            this.dataGridView3.Size = new System.Drawing.Size(372, 150);
             this.dataGridView3.TabIndex = 22;
             // 
             // idDataGridViewTextBoxColumn2
@@ -443,7 +443,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(726, 537);
+            this.textBox7.Location = new System.Drawing.Point(705, 537);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(91, 20);
             this.textBox7.TabIndex = 25;
@@ -876,7 +876,7 @@
             this.dataGridView6.Location = new System.Drawing.Point(16, 381);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView6.Size = new System.Drawing.Size(396, 150);
+            this.dataGridView6.Size = new System.Drawing.Size(432, 150);
             this.dataGridView6.TabIndex = 28;
             // 
             // idDataGridViewTextBoxColumn5
